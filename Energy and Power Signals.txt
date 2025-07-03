@@ -1,0 +1,30 @@
+% Energy Signal (Rectangular Pulse)
+t = 0:0.01:1;  % time vector
+x_energy = zeros(size(t));
+x_energy(t >= 0.2 & t <= 0.8) = 1;  % rectangular pulse
+
+% Power Signal (Sinusoidal Signal)
+f = 10;  % frequency
+x_power = sin(2*pi*f*t);  % sinusoidal signal
+
+% Calculate Energy and Power
+E = sum(abs(x_energy).^2);
+P = mean(abs(x_power).^2);
+
+% Plotting
+figure;
+subplot(2,1,1);
+plot(t, x_energy);
+title('Energy Signal (Rectangular Pulse)');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
+subplot(2,1,2);
+plot(t, x_power);
+title('Power Signal (Sinusoidal)');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
+% Display Energy and Power Values
+fprintf('Energy of the energy signal: %f\n', E);
+fprintf('Power of the power signal: %f\n', P);

@@ -1,0 +1,22 @@
+% Define the time array
+t = 0:0.01:1;
+
+% Define the even signal
+even_signal = cos(2*pi*2*t);
+
+% Define the odd signal
+odd_signal = sin(2*pi*2*t);
+
+% Create a figure and two subplots
+figure;
+subplot(2, 1, 1);
+plot(t, even_signal);
+title('Even Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
+subplot(2, 1, 2);
+plot(t, odd_signal);
+title('Odd Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');

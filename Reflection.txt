@@ -1,0 +1,22 @@
+% Define the time array
+t = 0:0.01:10;
+
+% Define the original signal (a sinusoidal signal with a frequency of 2 Hz)
+original_signal = sin(2*pi*2*t);
+
+% Define the reflection signal (a reflected version of the original signal)
+reflection_signal = -original_signal;
+
+% Create a figure and two subplots
+figure;
+subplot(2, 1, 1);
+plot(t, original_signal);
+title('Original Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
+subplot(2, 1, 2);
+plot(t, reflection_signal);
+title('Reflection Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');

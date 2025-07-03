@@ -1,0 +1,21 @@
+% Deterministic Signal (Sinusoidal Signal)
+t = 0:0.01:1;  % time vector
+f = 10;  % frequency
+x_det = sin(2*pi*f*t);  % sinusoidal signal
+
+% Random Signal (Gaussian White Noise)
+x_rand = randn(size(t));  % Gaussian white noise signal
+
+% Plotting
+figure;
+subplot(2,1,1);
+plot(t, x_det);
+title('Deterministic Signal (Sinusoidal)');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
+subplot(2,1,2);
+plot(t, x_rand);
+title('Random Signal (Gaussian White Noise)');
+xlabel('Time (s)');
+ylabel('Amplitude');

@@ -1,0 +1,9 @@
+t = -1:0.01:1;  % time vector
+delta = (t >= -0.01) & (t <= 0.01);  % approximate unit impulse function
+
+% Plotting
+figure;
+plot(t, delta);
+title('Unit Impulse Function');
+xlabel('Time (s)');
+ylabel('Amplitude');

@@ -1,0 +1,9 @@
+t = -1:0.01:1;  % time vector
+u = (t >= 0);  % unit step function
+
+% Plotting
+figure;
+plot(t, u);
+title('Unit Step Function');
+xlabel('Time (s)');
+ylabel('Amplitude');

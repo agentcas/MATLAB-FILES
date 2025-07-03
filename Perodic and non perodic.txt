@@ -1,0 +1,22 @@
+% Define the time array
+t = 0:0.01:10;
+
+% Define the periodic signal (sinusoidal signal with a frequency of 2 Hz)
+periodic_signal = sin(2*pi*2*t);
+
+% Define the non-periodic signal (random noise)
+non_periodic_signal = randn(size(t));
+
+% Create a figure and two subplots
+figure;
+subplot(2, 1, 1);
+plot(t, periodic_signal);
+title('Periodic Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+
+subplot(2, 1, 2);
+plot(t, non_periodic_signal);
+title('Non-Periodic Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');

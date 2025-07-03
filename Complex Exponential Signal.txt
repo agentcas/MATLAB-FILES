@@ -1,0 +1,16 @@
+t = 0:0.01:1;  % time vector
+A = 1;  % amplitude
+w = 2*pi;  % angular frequency (2*pi radians per second)
+phi = pi/4;  % phase angle (45 degrees)
+
+x = A * exp(1j * (w * t + phi));  % complex exponential signal
+
+% Plotting
+figure;
+plot(t, real(x));  % plot real part
+hold on;
+plot(t, imag(x));  % plot imaginary part
+title('Complex Exponential Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+legend('Real Part', 'Imaginary Part');
